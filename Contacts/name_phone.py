@@ -48,7 +48,7 @@ def map2triples(subj_uri, data_map, attr_map):
 def main():
     droid = android.Android()
     concept_uri = 'http://www.ontos.com/ontobase#Contacts'
-    executeDelete(concept_uri)	
+#    executeDelete(concept_uri)	
 
     for cid in droid.contactsGetIds().result:
         subj_uri = 'http://contact'+str(cid)
