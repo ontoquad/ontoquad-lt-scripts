@@ -9,7 +9,7 @@ class Triple:
         return '<' + self.ss + '> <' + self.pp + '> ' + ('<' + self.oo + '>' if self.oo.startswith('http://') else '"' + self.oo + '"')
 
 def executeInsert(triples):
-    endpoint = 'http://127.0.0.1:8080/sparql'
+    endpoint = 'http://127.0.0.1:8081/sparql'
 
     query = 'INSERT DATA {\n'
     for triple in triples:
