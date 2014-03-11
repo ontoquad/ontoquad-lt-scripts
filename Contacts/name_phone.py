@@ -9,7 +9,7 @@ class Triple:
         return '<' + self.ss + '> <' + self.pp + '> ' + ('<' + self.oo + '>' if self.oo.startswith('http://') else '"' + self.oo + '"')
 
 def executeInsert(triples):
-    endpoint = 'http://127.0.0.1:8081/sparql'
+    endpoint = 'http://127.0.0.1:8080/sparql'
 
     query = 'INSERT DATA {\n'
     for triple in triples:
@@ -24,7 +24,7 @@ def executeInsert(triples):
     urllib.urlopen(endpoint, params)
 
 def executeDelete(concept_uri):
-    endpoint = 'http://127.0.0.1:8081/sparql'
+    endpoint = 'http://127.0.0.1:8080/sparql'
 
     query = 'DELETE WHERE {\n'
     query += '?s ?p ?o.\n'
